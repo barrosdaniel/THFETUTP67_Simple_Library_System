@@ -1,13 +1,20 @@
 Hello!
 
-This README file contains instructions for video "Building Constructor Methods", S1V3.
+This README file contains instructions for video "Explanation: Revisiting the checkOut() and returnBook() Methods", S3V1.
 
 Your instructions are as follows:
 
-1) In the Library.js file, add a constructor method to the Library class. In the constructor method, initialize the following properties: books, patrons.
+1) Inside the Patron class, add two methods: `checkOut()` and `returnBook()`
 
-2) In the Book.js file, add a constructor method to the Book class. In the constructor method, initialize the following properties: title, author, isbn.
+- The `checkOut()` method should receive one parameter, a Book object. 
+- It should update the `currentBook` property to the Book object that's passed in.
+- It should update that Book object's `out` property to `true`. 
+- It should update that Book object's `patron` property to the Patron object itself
+- It should calculate the due date (14 days in the future) and then set the Book object's `dueDate` property to that due date.
 
-3) In the Patron.js file, add a constructor method to the Patron class. In the constructor method, initialize the following properties: name, email, currentBook.
 
-Don't forget to add parameters for any values that need to be passed in to each of the constructor methods.
+- The `returnBook()` method should receive one parameter, a Book object.
+- It should update the `currentBook` property to `null`
+- It should update that Book object's `out` property to `false`
+- It should update that Book object's `patron` property to `null`
+- It should update that Book object's `dueDate` property to `null`

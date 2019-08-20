@@ -21,4 +21,16 @@
 
   const patron = new Patron('Daniel Barros', 'barros.daniel@outlook.com');
   console.log(patron);
+
+  library.addBook(book);
+  library.addPatron(patron);
+  console.log(library);
+
+  patron.checkOut(book);
+  console.log(book);
+  console.log(patron);
+
+  patron.returnBook(book);
+  console.log(book);
+  console.log(patron);
 </script>
